@@ -1,0 +1,71 @@
+body {
+    font-family: 'Times New Roman', serif;
+    background-image: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets.teenvogue.com%2Fphotos%2F5e6bffbbdee1770008c6d9bd%2F16%3A9%2Fw_2560%252Cc_limit%2FGettyImages-577674005.jpg&tbnid=VeJyr2WDfsU9CM&vet=12ahUKEwibg-jI8I-EAxWXk_0HHcDMA8sQMygDegQIARB7..i&imgrefurl=https%3A%2F%2Fwww.teenvogue.com%2Fstory%2Fbooks-to-read-quarantine-coronavirus&docid=lZCoHAhsDIU4ZM&w=2560&h=1440&q=books&client=safari&ved=2ahUKEwibg-jI8I-EAxWXk_0HHcDMA8sQMygDegQIARB7'); /* Replace with actual image URL */
+    background-size: cover;
+    color: #8B4513; /* SaddleBrown text */
+    text-align: center;
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.link-container {
+    margin: 20px 0;
+}
+
+.link {
+    background-color: #deb887; /* BurlyWood */
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: inline-block;
+}
+
+.link:hover {
+    background-color: #d2b48c; /* Tan */
+}
+
+.form-container {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input[type=text], input[type=email], input[type=submit] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text], input[type=email] {
+    border: 1px solid #ccc;
+}
+
+input[type=submit] {
+    background-color: #8B4513; /* SaddleBrown */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #6b3d1e;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #deb887;
+    color: white;
+}

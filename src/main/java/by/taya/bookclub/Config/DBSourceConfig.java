@@ -1,4 +1,4 @@
-package by.taya.bookclub.DBConfig;
+package by.taya.bookclub.Config;
 
 import javax.sql.DataSource;
 import org.springframework.context.annotation.Bean;
@@ -27,7 +27,7 @@ public class DBSourceConfig implements WebMvcConfigurer {
     public SpringLiquibase liquibase(DataSource dataSource) {
         SpringLiquibase liquibase = new SpringLiquibase();
         liquibase.setDataSource(dataSource);
-        liquibase.setChangeLog("/Users/taisiianekrasova/IdeaProjects/bookClub/src/main/resources/db/changelog"); // Replace with the path to your changelog file
+        liquibase.setChangeLog("classpath:/db/changelog/changelog-master.yaml");
         return liquibase;
     }
 }
