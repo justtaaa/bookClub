@@ -24,3 +24,6 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     unique: true
+# application.yml
+server:
+  address: 0.0.0.0

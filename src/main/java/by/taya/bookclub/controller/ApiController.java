@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/api")
 public class ApiController {
 
-    // Example service injection
+
     @Autowired
     private MemberService memberService;
 
@@ -20,10 +20,10 @@ public class ApiController {
         return memberService.getAllMembers();
     }
 
-    @PostMapping("/members")
+    @PostMapping("/api/members")
     public Member addMember(@RequestBody Member member) {
         return memberService.save(member);
     }
 
-    // Add more endpoints as needed
+
 }

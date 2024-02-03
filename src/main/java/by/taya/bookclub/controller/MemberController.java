@@ -1,31 +1,25 @@
 package by.taya.bookclub.controller;
 
-import by.taya.bookclub.repositories.MemberRepository;
-import  by.taya.bookclub.models.Member;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
+import by.taya.bookclub.models.Member;
+import by.taya.bookclub.services.MemberService;
 
 @RestController
-@RequestMapping("/members")
 public class MemberController {
 
     @Autowired
-    private MemberRepository memberRepository;
-
-    @GetMapping
-    public List<Member> getAllMembers() {
-        return memberRepository.findAll();
-    }
+    private MemberService memberService;
 
     @PostMapping
-    public Member addMember(@RequestBody Member member) {
-        return memberRepository.save(member);
+    public ResponseEntity<Member> addMember(@RequestBody Member member) {
+        Member savedMember = memberService.save(member);
+        return new ResponseEntity<>(savedMember, HttpStatus.CREATED);
     }
-
-
 }
